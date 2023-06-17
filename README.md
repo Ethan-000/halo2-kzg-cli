@@ -15,7 +15,7 @@ cargo install --path .
 run
 
 ```text
-halow_kzg --help
+halo2_kzg --help
 ```
 
 to see full functionalities.

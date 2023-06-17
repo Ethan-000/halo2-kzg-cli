@@ -7,16 +7,16 @@ env:
 
 jobs:
   fmt:
-    name: halo2-kzg
+    name: halo2-kzg linux
     runs-on: ubuntu-latest
     strategy:
       matrix:
         toolchain:
-          - nightly-2022-10-28
+          - stable
     steps:
       - uses: actions/checkout@v3
       - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
       - run: rustup component add rustfmt && rustup component add clippy
-      - run: cargo hack build --verbose
+      - run: cargo build --verbose
       - run: cargo fmt --all -- --check
       - run: cargo clippy --all-targets -- -D warnings

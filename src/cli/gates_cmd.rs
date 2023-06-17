@@ -1,8 +1,7 @@
-use acvm::{ProofSystemCompiler};
+use acvm::ProofSystemCompiler;
 use clap::Args;
 use halo2_backend::Halo2;
 use nargo::artifacts::program::PreprocessedProgram;
-
 
 use crate::constants::TARGET_DIR;
 use crate::errors::CliError;
