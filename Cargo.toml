@@ -1,0 +1,20 @@
+[package]
+name = "halo2_kzg"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+acvm = "0.14.1"
+clap = { version = "4.3.4", features = ["derive"] }
+color-eyre = "0.6.2"
+dirs = "5.0.1"
+halo2_backend = { git = "https://github.com/Ethan-000/halo2_backend", tag = "v0.1.1", features = [
+    "pse_halo2",
+] }
+hex = "0.4.3"
+nargo = { git = "https://github.com/noir-lang/noir", package = "nargo", rev = "a0cef17d8ce552d73b1720916bb6f8b79bb7f959" }
+noirc_abi = { git = "https://github.com/noir-lang/noir", package = "noirc_abi", rev = "a0cef17d8ce552d73b1720916bb6f8b79bb7f959" }
+serde_json = "1.0.97"
+thiserror = "1.0.40"
+tokio = { version = "1.28.1", features = ["rt"] }
